@@ -1,0 +1,14 @@
+# Circuits
+Karnaugh Map to circuit
+
+module top_module (
+    input [4:1] x,
+    output f
+); 
+
+    //assign f = (~x[2] & ~x[4]) | (~x[1] & x[3]) | (x[2] & x[3] & x[4]);
+    assign f = ~( (x[1]&x[2]& ~x[4]) | (x[2]& ~x[3]) | (~x[3]&x[4]) | (x[1]& ~x[2]&x[4]));
+endmodule
+
+总结：
+一次通过，第一种是SOP模式；第二种是POS模式。
