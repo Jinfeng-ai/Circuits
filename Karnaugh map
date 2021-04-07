@@ -1,0 +1,13 @@
+# Circuits
+Karnaugh Map to circuit
+
+
+module top_module (
+    input [4:1] x, 
+    output f );
+
+    assign f = x[1] & x[2] & (~x[3]) | (~x[1]) & x[3];
+endmodule
+
+总结：
+一次通过，根据之前见过的这种一个多位变量，知道应该一位一位的进行写。
