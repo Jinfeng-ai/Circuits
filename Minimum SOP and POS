@@ -1,0 +1,24 @@
+# Circuits
+Karnaugh Map to circuit
+
+· 题目分析：根据题目描述可以得到卡诺图如下，以及它的化简
+
+· SOP form 即与或式，对应于卡诺图就是圈1即可
+· POS form 即或与式, 对应于卡诺图就是圈0后，整体取反
+
+
+我的代码：
+module top_module (
+    input a,
+    input b,
+    input c,
+    input d,
+    output out_sop,
+    output out_pos
+); 
+
+    assign out_sop = c&d | (~a)&(~b)&c;
+    assign out_pos = ~( ~c | a&c&(~d) | b&c&(~d) );
+endmodule
+
+
