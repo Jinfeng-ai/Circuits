@@ -1,7 +1,7 @@
 # Circuits
 Karnaugh Map to circuit
 
-
+我的版本：
 module top_module(
     input a,
     input b,
@@ -9,7 +9,7 @@ module top_module(
     input d,
     output out  ); 
 
-    assign out = (~b)&(~c) | (~a)&(~d) | b&c&d | a&c&d;
+    assign out = a&(~c) | (~b)&c | a&c;
 endmodule
 
 总结：
